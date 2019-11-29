@@ -3,7 +3,8 @@
 "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
  <tiles-definitions>
  	<definition name="/" template="/WEB-INF/views/layout/layout.jsp">
- 		<put-attribute name="menu" value="/WEB-INF/views/menu/menu.jsp"></put-attribute>
- 		<put-attribute name="header" value="/WEB-INF/views/header/header.jsp"></put-attribute>
+ 		<put-attribute name="menu" value="/WEB-INF/views/menu/menu.jsp"/>
+ 		<put-attribute name="header" value="/WEB-INF/views/header/header.jsp"/>
+ 		<put-attribute name="main" value="/WEB-INF/views/main/main.jsp"/>
  	</definition>
  </tiles-definitions>
