@@ -15,7 +15,7 @@
 		<tiles:insertAttribute name="header"/>
 		<tiles:insertAttribute name="menu"/>
 	 </header>
-	<main><tiles:insertAttribute name="main"/> </main>
-	<footer></footer>
+	<main><tiles:insertAttribute name="main"/></main>
+	<footer><tiles:insertAttribute name="footer"/></footer>
 </body>
 </html>

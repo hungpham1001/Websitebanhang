@@ -1,6 +1,6 @@
 <%@page pageEncoding="utf-8" %>
 <html>
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-default" data-spy="affix" data-offset-top="155">
 		<ul class="nav navbar-nav">
 			<li><a href="/">Home</a></li>
 			<li><a href="men">Men</a>
