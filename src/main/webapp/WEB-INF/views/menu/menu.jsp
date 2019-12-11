@@ -3,6 +3,13 @@
 	<nav class="navbar navbar-default" data-spy="affix" data-offset-top="155">
 		<ul class="nav navbar-nav">
 			<li><a href="/">Home</a></li>
+			<li><a href="#">Tất cả sản phẩm</a>
+				<div>
+					<a href="#">Sản phẩm bán chạy</a>
+					<a href="#">Sản phẩm mới</a>
+					<a href="#">Sản phẩm giảm giá</a>
+				</div>
+			</li>
 			<li><a href="men">Men</a>
 				<div>
 					<a href="#">Giày</a>

@@ -1,4 +1,5 @@
 <%@page pageEncoding="utf-8"%>
+<%@taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <html>
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
 	<ol class="carousel-indicators">
@@ -30,132 +31,18 @@
 </div>
 <div class="products container">
 	<h3>Sản phẩm mới</h3>
-	<div class="row">
-		<div class="col-sm-3">
-			<div class="panel panel-default">
-				<div class="panel-body">
-					<img alt="" src="picture/Sample.jpg">
-				</div>
-				<div class="panel-footer">
-					<button class="btn btn-primary">Xem ngay</button>
-				</div>
+	 <c:forEach var="p" items="${listhotItem}">
+	 <div class="col-sm-3">	
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<img alt="hot items" src="/picture/${p.image}">
+			</div>
+			<div class="panel-footer">
+				<button class="btn btn-primary">Xem ngay</button>
+			</div>
 			</div>
 		</div>
-		<div class="col-sm-3">
-			<div class="panel panel-default">
-				<div class="panel-body">
-					<img alt="" src="picture/Sample.jpg">
-				</div>
-				<div class="panel-footer">
-					<button class="btn btn-primary">Xem ngay</button>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-3">
-			<div class="panel panel-default">
-				<div class="panel-body">
-					<img alt="" src="picture/Sample.jpg">
-				</div>
-				<div class="panel-footer">
-					<button class="btn btn-primary">Xem ngay</button>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-3">
-			<div class="panel panel-default">
-				<div class="panel-body">
-					<img alt="" src="picture/Sample.jpg">
-				</div>
-				<div class="panel-footer">
-					<button class="btn btn-primary">Xem ngay</button>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-sm-3">
-			<div class="panel panel-default">
-				<div class="panel-body">
-					<img alt="" src="picture/Sample.jpg">
-				</div>
-				<div class="panel-footer">
-					<button class="btn btn-primary">Xem ngay</button>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-3">
-			<div class="panel panel-default">
-				<div class="panel-body">
-					<img alt="" src="picture/Sample.jpg">
-				</div>
-				<div class="panel-footer">
-					<button class="btn btn-primary">Xem ngay</button>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-3">
-			<div class="panel panel-default">
-				<div class="panel-body">
-					<img alt="" src="picture/Sample.jpg">
-				</div>
-				<div class="panel-footer">
-					<button class="btn btn-primary">Xem ngay</button>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-3">
-			<div class="panel panel-default">
-				<div class="panel-body">
-					<img alt="" src="picture/Sample.jpg">
-				</div>
-				<div class="panel-footer">
-					<button class="btn btn-primary">Xem ngay</button>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-sm-3">
-			<div class="panel panel-default">
-				<div class="panel-body">
-					<img alt="" src="picture/Sample.jpg">
-				</div>
-				<div class="panel-footer">
-					<button class="btn btn-primary">Xem ngay</button>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-3">
-			<div class="panel panel-default">
-				<div class="panel-body">
-					<img alt="" src="picture/Sample.jpg">
-				</div>
-				<div class="panel-footer">
-					<button class="btn btn-primary">Xem ngay</button>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-3">
-			<div class="panel panel-default">
-				<div class="panel-body">
-					<img alt="" src="picture/Sample.jpg">
-				</div>
-				<div class="panel-footer">
-					<button class="btn btn-primary">Xem ngay</button>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-3">
-			<div class="panel panel-default">
-				<div class="panel-body">
-					<img alt="" src="picture/Sample.jpg">
-				</div>
-				<div class="panel-footer">
-					<button class="btn btn-primary">Xem ngay</button>
-				</div>
-			</div>
-		</div>
-	</div>
+	</c:forEach>	
 </div>
 
 </html>
