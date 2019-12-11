@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="utf-8">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/css.css"/>
@@ -15,7 +16,7 @@
 		<tiles:insertAttribute name="header"/>
 		<tiles:insertAttribute name="menu"/>
 	 </header>
-	<main><tiles:insertAttribute name="main"/> </main>
-	<footer></footer>
+	<main><tiles:insertAttribute name="main"/></main>
+	<footer><tiles:insertAttribute name="footer"/></footer>
 </body>
 </html>
