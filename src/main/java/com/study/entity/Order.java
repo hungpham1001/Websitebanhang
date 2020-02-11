@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -17,16 +18,14 @@ import javax.persistence.TemporalType;
 @Table(name = "Orders")
 public class Order {
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	Integer id;
-	String customerId;
+	//String customerId;
 	@Temporal(TemporalType.DATE)
 	Date orderDate;
-	String address;
 	Double amount;
 	String description;
-	
-	@OneToMany(mappedBy = "order",fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "order", fetch = FetchType.EAGER)
 	List<OrderDetail> orderDetails;
 	
 	@ManyToOne
@@ -41,28 +40,12 @@ public class Order {
 		this.id = id;
 	}
 
-	public String getCustomerId() {
-		return customerId;
-	}
-
-	public void setCustomerId(String customerId) {
-		this.customerId = customerId;
-	}
-
 	public Date getOrderDate() {
 		return orderDate;
 	}
 
 	public void setOrderDate(Date orderDate) {
 		this.orderDate = orderDate;
-	}
-
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
 	}
 
 	public Double getAmount() {

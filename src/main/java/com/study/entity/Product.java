@@ -4,7 +4,6 @@ import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -31,7 +30,7 @@ public class Product {
 	Integer viewCount;
 	boolean special;
 	
-	@OneToMany(mappedBy = "product",fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "product")
 	List<OrderDetail> orderDetails;
 	
 	@ManyToOne
@@ -85,7 +84,6 @@ public class Product {
 	public void setAvailable(boolean available) {
 		this.available = available;
 	}
-
 
 	public Integer getQuantity() {
 		return quantity;

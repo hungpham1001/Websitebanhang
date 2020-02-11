@@ -1,0 +1,34 @@
+.container .product-detail img{
+	width: 100%;
+	height: auto;
+}
+.container .product-detail .col-*{
+	position: relative;
+	margin: 20px;
+}
+
+.container .product-detail button {
+	display: block;
+	margin-top: 10px;
+	width: 100%;
+	max-height: 50px;
+}
+.container .product-detail button i {
+	margin-right: 5px;
+}
+.theSameProduct .img{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.theSameProduct img{
+	width: 200px;
+	height: 200px;
+	margin: 10px 10px 5px ;
+	border: 1px solid lightgrey;
+	border-radius: 5px;
+}
+.theSameProduct img:hover{
+	box-shadow: 0px 0px 10px 5px rgba(75, 114, 124, 0.2);
+}
+

@@ -2,6 +2,7 @@ package com.study.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -11,10 +12,8 @@ import javax.persistence.Table;
 @Table(name = "OrderDetails")
 public class OrderDetail {
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	Integer id;
-	Integer orderId;
-	Integer productId;
 	Double unitPrice;
 	Integer quantity;
 	Double discount;
@@ -33,22 +32,6 @@ public class OrderDetail {
 
 	public void setId(Integer id) {
 		this.id = id;
-	}
-
-	public Integer getOrderId() {
-		return orderId;
-	}
-
-	public void setOrderId(Integer orderId) {
-		this.orderId = orderId;
-	}
-
-	public Integer getProductId() {
-		return productId;
-	}
-
-	public void setProductId(Integer productId) {
-		this.productId = productId;
 	}
 
 	public Double getUnitPrice() {

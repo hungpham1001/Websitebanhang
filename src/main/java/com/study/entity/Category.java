@@ -3,7 +3,6 @@ package com.study.entity;
 import java.util.List;
 
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -11,14 +10,14 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "MenCategories")
+@Table(name = "Categories")
 public class Category {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	Integer id;
 	String name;
 	String nameVN;
-	@OneToMany(mappedBy = "category",fetch = FetchType.EAGER )
+	@OneToMany(mappedBy = "category")
 	List<Product> products;
 	public Integer getId() {
 		return id;

@@ -1,0 +1,22 @@
+.basketDetail img{
+	max-width: 200px;
+	max-height: 200px;
+}
+#sideNav {
+	position: fixed;
+	left: 20px;
+	overflow-x: hidden;
+	z-index: 1;
+	height: 100%;
+	width: 0px;
+	transition: 0.5s;
+}
+.close{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+#listImage{
+	max-height: 100px;
+	max-width: 200px;
+}

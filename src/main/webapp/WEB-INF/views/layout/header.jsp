@@ -1,3 +1,4 @@
+<%@page pageEncoding="utf-8" %>
 <html>
 <div class="header">
 	<div class="contact">
@@ -8,13 +9,7 @@
 	</div>
 	<div class="logan">
 		<h3>TinTin's Shop</h3>
-		<h4>- Thích Thì Mua, Không Thích Thì Mua -</h4>
-	</div>
-	<div class="user">
-		<span class="glyphicon glyphicon-user"></span> 
-		<a href="login">Login</a>
+		<h4>- ThÃ­ch ThÃ¬ Mua, KhÃ´ng ThÃ­ch ThÃ¬ Mua -</h4>
 	</div>
 </div>
-
-
 </html>

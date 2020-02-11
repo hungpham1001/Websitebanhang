@@ -3,7 +3,6 @@ package com.study.entity;
 import java.util.List;
 
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -17,13 +16,32 @@ public class Customer {
 	String fullname;
 	String email;
 	String photo;
+	String phoneNumber;
+	String address;
 	boolean activated;
 	boolean admin;
-	@OneToMany(mappedBy = "customer",fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "customer")
 	List<Order> orders;
 	public String getId() {
 		return id;
 	}
+	
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
 	public void setId(String id) {
 		this.id = id;
 	}
