@@ -103,27 +103,28 @@
 	.navbar-nav>li:hover div {
 		display: block;
 	}
-	.carousel, .slide {
-		display: flex;
-		justify-content: center;
+	.carousel-inner{
+		width: 90%;
 		height: 500px;
 	}
-	 .item {	
-		width: 80%;
-		height: 500px;
-	}
+
 	.carousel-indicators>li{
 		border-color: lightgrey;
+	}
+	.carousel-inner>.active{
+		left:20% !important;
+	}
+	.carousel-inner>.next.left,.carousel-inner>.prev.right{
+		left:20% !important
+	}
+	.carousel-inner>.item>	img{
+		width: 60% !important;
+		height: 500px !important;
 	}
 	.affix{
 		top: 0px;
 		width:100%;
 		z-index: 1;
-
-	}
-	.item img{
-		width: 100%;
-		height: auto;
 	}
 	.products .frameImage{
 		border: 1px solid lightgrey;
