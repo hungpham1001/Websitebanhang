@@ -27,22 +27,4 @@ public class CategoryDaoImpl extends DAOAbstract<Category, Integer> {
 		List<Category> list = query.getResultList();
 		return list;
 	}
-
-	@Override
-	public void save(Category entity) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void update(Category entity) {
-		// TODO Auto-generated method stub
-	}
-
-	@Override
-	public void delete(Category entity) {
-		// TODO Auto-generated method stub
-		
-	}
-
 }
