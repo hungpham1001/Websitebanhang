@@ -72,7 +72,8 @@ $(document).ready(function(){
 			$("#main").css({"margin-left":"320px","transition":"0.5s"});
 			$("#sideNav").css("width","320px")
 		} else {
-			alert("Please add items into basket!")
+			alert("Please add items into basket!");
+			$("h3").prepend("<h4>Please add items into basket!</h4>")
 		}
 	})
 	$(".close").click(function(){

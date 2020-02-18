@@ -10,17 +10,17 @@
 	</ol>
 	<div class="carousel-inner">
 		<div class="item active">
-			<img alt="" src="/static/picture/curosel/39-392424_adidas-new-model-shoes..jpg">
+			<img alt="" src="https://i.ibb.co/BzpBtff/nike-youth-air-force-1-an20-ct7724-100.jpg">
 		</div>
 		<div class="item">
-			<img alt="" src="/static/picture/curosel/adidas-Mens-Grand.jpg">
+			<img alt="" src="https://i.ibb.co/HKFkPKJ/Nike-Blazer-Mid-Sacai-White-Grey-Product.jpg">
 		</div>
 		<div class="item">
-			<img src="/static/picture/curosel/best-high-top-sneakers.jpg">
+			<img src="https://i.ibb.co/pxHBcRD/nike.jpg">
 		</div>
 		<div class="item">
 			<img alt=""
-				src="/static/picture/curosel/images.jpg">
+				src="https://i.ibb.co/rfpyW2Y/18-NIKWRMX270-XXXXXLFS-Barely-Rose-Vintage-Wine-is.jpg">
 		</div>
 	</div>
 	<a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -35,7 +35,7 @@
 			<div class="col-md-3 col-sm-6 col-xs-12">
 				<div class="frameImage">
 					<div class="frameImage-body">
-						<img alt="" src="/static/picture/${p.image}">
+						<img alt="" src="https://i.ibb.co/${p.image}">
 					</div>
 					<div class="frameImage-footer">
 						<a class="btn btn-info" href="/product/${p.id}">Detail</a>

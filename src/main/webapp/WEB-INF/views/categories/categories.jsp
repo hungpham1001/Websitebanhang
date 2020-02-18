@@ -7,7 +7,7 @@
 			<div class="col-md-3 col-xs-12">
 				<div class="frameImage">
 					<div class="frameImage-body">
-						<img alt="" src="/static/picture/${p.image}">
+						<img alt="" src="https://i.ibb.co/${p.image}">
 					</div>
 					<div class="frameImage-footer">
 						<a class="btn btn-info" href="/product/${p.id}">Details</a>

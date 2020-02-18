@@ -45,7 +45,7 @@
 					<tbody class="basketDetail">
 						<c:forEach var="p" items="${basketList}">
 								<tr data-id="${p.id}" class="row">
-									<td><a href="/product/${p.id}"><img alt="" src="/static/picture/${p.image}"></a></td>
+									<td><a href="/product/${p.id}"><img alt="" src="https://i.ibb.co/${p.image}"></a></td>
 									<td>${p.name}</td>
 									<td id="priceItem">${p.unitPrice}</td>
 									<td>

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 
 import com.study.entity.Category;
 @Repository
-public class CategoryDAOImpl extends AbstractDao<Category, Integer>{
+public class CategoryDAOImpl extends DAOAbstract<Category, Integer>{
 
 	@Override
 	public Category findById(Integer id) {

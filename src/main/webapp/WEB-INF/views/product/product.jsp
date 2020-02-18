@@ -6,7 +6,7 @@
 		<div class="row product-detail ">
 			<h2>Product Detail:</h2>
 			<div class="col-sm-4">
-				<img alt="" src="/static/picture/${product.image}">
+				<img alt="" src="https://i.ibb.co/${product.image}">
 			</div>
 			<div class="col-sm-8">
 				<p>Giá: <f:formatNumber value="${product.unitPrice}" pattern="$#.###" /></p>
@@ -24,7 +24,7 @@
 			<h2>Sản phẩm cùng loại:</h2>
 			<div class="img">
 				<c:forEach var="p" items="${list}">
-						<a href="/product/${p.id}"><img  alt="" src="/static/picture/${p.image}"></a>
+						<a href="/product/${p.id}"><img  alt="" src="https://i.ibb.co/${p.image}"></a>
 				</c:forEach>
 			</div>
 		</div>

@@ -104,22 +104,22 @@
 		display: block;
 	}
 	.carousel-inner{
-		width: 90%;
-		height: 500px;
+		width: 30%;
+		height: 300px;
 	}
 
 	.carousel-indicators>li{
 		border-color: lightgrey;
 	}
 	.carousel-inner>.active{
-		left:20% !important;
+		left:40% !important;
 	}
 	.carousel-inner>.next.left,.carousel-inner>.prev.right{
-		left:20% !important
+		left:40% !important
 	}
 	.carousel-inner>.item>	img{
-		width: 60% !important;
-		height: 500px !important;
+		width: 20% !important;
+		height: 300px !important;
 	}
 	.affix{
 		top: 0px;
