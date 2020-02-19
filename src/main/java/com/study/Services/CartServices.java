@@ -25,8 +25,8 @@ public class CartServices {
 	}
 	public void plus(int key) {
 		Product item = map.get(key);
-		int quantity = item.getQuantity();
-		item.setQuantity(++quantity);
+		int quantity = item.getQuantity()+1;
+		item.setQuantity(quantity);
 		map.replace(key, item);
 	}
 	public void add(int id) {

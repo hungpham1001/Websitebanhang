@@ -3,11 +3,10 @@
 	max-height: 200px;
 }
 #sideNav {
-	position: fixed;
-	left: 20px;
-	overflow-x: hidden;
-	z-index: 1;
-	height: 100%;
+	position: relative;
+	top: 10px;
+	margin-left: 20px;
+	overflow-y: scroll;
 	width: 0px;
 	transition: 0.5s;
 }

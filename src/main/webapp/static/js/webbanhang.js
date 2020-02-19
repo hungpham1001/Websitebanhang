@@ -52,33 +52,35 @@ $(document).ready(function(){
 	})
 	$("button[name=plusQuantity]").click(function(){
 		var id = $(this).closest("tr").attr("data-id");
+		console.log(id);
 		var quantity = $(this).closest("div").children("input").val();
 		if(quantity<99){
+			quantity++;
 			$.ajax({
 				url:"/plus-item-basket/"+id,
 				TYPE:"POST",
 				success: function(response){
 					$("#cartIcon").text(response[0]);
-					$("#total").text(response[1])
+					$("#total").val(response[1])
 				}
 	 		})
-	 		quantity++;
 	 		$(this).closest("div").children("input").val(quantity);
 		}
 	})
 	$("button[name=checkout]").click(function(){
-		console.log($("#amount").val());
+		var html =``;
 		if($("#amount").val()!=0){
-			$("#main").css({"margin-left":"320px","transition":"0.5s"});
-			$("#sideNav").css("width","320px")
+			//$("#main").prepend(html);
+			$("#main").css({flex:"70%",transition:"0.5s"});
+			$("#sideNav").css({flex:"30%",transition:"0.5s"})
 		} else {
 			alert("Please add items into basket!");
 			$("h3").prepend("<h4>Please add items into basket!</h4>")
 		}
 	})
 	$(".close").click(function(){
-		$("#sideNav").css({width:"0px"});
-		$("#main").css("margin-left","0px")
+		$("#sideNav").css({flex:"0%",transition:"0.5s"});
+		$("#main").css({flex:"100%",transition:"0.5s"})
 	})
 	$("button[name=orderDetail]").click(function(){
 		var id = $(this).closest("tr").attr("data-id");

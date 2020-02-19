@@ -6,17 +6,27 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Pattern;
+import com.sun.istack.NotNull;
 @Entity
 @Table(name = "Customers")
 public class Customer {
 	@Id
+	@NotEmpty
 	String id;
+	@Pattern(regexp = "[\\d\\w]{6,}")
 	String password;
+	@NotEmpty
 	String fullname;
+	@Email
 	String email;
 	String photo;
+	@NotNull
+	@Pattern(regexp = "[09|03]\\d{8}")
 	String phoneNumber;
+	@NotNull
 	String address;
 	boolean activated;
 	boolean admin;

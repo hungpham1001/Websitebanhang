@@ -6,9 +6,13 @@ import java.util.Date;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,18 +40,21 @@ public class OrderController {
 	CartServices cart;
 	
 	@PostMapping("/order/success-guest")
-	public String orderSuccess(Customer cust,@RequestParam("description") String description, Model model) {
-		cust.setPhoneNumber(cust.getId());
-		Customer customer = cdao.findById(cust.getId());
+	public String orderSuccess(@Valid @ModelAttribute("user") Customer user,BindingResult result,@RequestParam("description") String description, Model model) {
+		if(result.hasErrors()) {
+			return "basket/basket-detail-guest";
+		}
+		user.setPhoneNumber(user.getId());
+		Customer customer = cdao.findById(user.getId());
 		if(customer==null) {
-			cdao.save(cust);			
-		} else if(!customer.getAddress().equalsIgnoreCase(cust.getAddress())) {
-			cdao.update(cust);
+			cdao.save(user);			
+		} else if(!customer.getAddress().equalsIgnoreCase(user.getAddress())) {
+			cdao.update(user);
 		}
 		Order order = new Order();
-		order.setCustomer(cust);
+		order.setCustomer(user);
 		order.setAmount(cart.getTotal());
-		order.setDescription(cust.getAddress()+" "+description);
+		order.setDescription(user.getAddress()+" "+description);
 		Date date = new Date();
 		order.setOrderDate(date);
 		List<OrderDetail> details = new ArrayList<OrderDetail>();

@@ -9,9 +9,12 @@ import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -80,9 +83,12 @@ public class AccountController {
 		return "account/registration";
 	}
 	@PostMapping("account/registration")
-	public String regist2(@ModelAttribute("user") Customer user,Model model,
+	public String regist2(@Valid @ModelAttribute("user") Customer user,BindingResult resutl,Model model,
 			@RequestParam("attach") MultipartFile attach,
 			@RequestParam("confirmPass") String confirmPass) throws IllegalStateException, IOException{
+		if(resutl.hasErrors()) {
+			return "account/registration";
+		}
 		HttpSession session = request.getSession();
 		if(attach.isEmpty()) {
 			user.setPhoto("male_user_icon.png");
