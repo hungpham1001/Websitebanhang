@@ -1,24 +1,27 @@
 <%@page pageEncoding="utf-8" %>
 <%@taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 	<nav class="navbar navbar-default" data-spy="affix" data-offset-top="150">
-		<ul class="nav navbar-nav col-md-12">
-			<li><a href="/home">Home</a></li>
-			<li><a href="#">All Product</a>
-				<div>
-					<a href="#">Best seller</a>
-					<a href="#">New items</a>
-					<a href="#">Sale items</a>
-				</div>
-			</li>
-			<li><a href="#">Men</a>
-				<div>
-					<c:forEach var="list" items="${categoryList}">
-						<a href="/category/${list.id}">${list.name}</a>
-					</c:forEach>
-				</div>
-			<li><a href="/about">About</a></li>
-			<li><a href="/contact">Contact</a></li>
-		</ul>
+		<div class="collapse-menu">
+			<span class="glyphicon glyphicon-menu-hamburger"></span>
+			<ul data-status="false" class="nav navbar-nav">
+				<li><a href="/home">Home</a></li>
+				<li><a href="#">All Product</a>
+					<div>
+						<a href="#">Best seller</a>
+						<a href="#">New items</a>
+						<a href="#">Sale items</a>
+					</div>
+				</li>
+				<li><a href="#">Men</a>
+					<div>
+						<c:forEach var="list" items="${categoryList}">
+							<a href="/category/${list.id}">${list.name}</a>
+						</c:forEach>
+					</div>
+				<li><a href="/about">About</a></li>
+				<li><a href="/contact">Contact</a></li>
+			</ul>
+		</div>
 		<div class="menu-nav">
 			<div class="user">
 					<c:choose>

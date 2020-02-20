@@ -70,7 +70,6 @@ $(document).ready(function(){
 	$("button[name=checkout]").click(function(){
 		var html =``;
 		if($("#amount").val()!=0){
-			//$("#main").prepend(html);
 			$("#main").css({flex:"70%",transition:"0.5s"});
 			$("#sideNav").css({flex:"30%",transition:"0.5s"})
 		} else {
@@ -87,5 +86,15 @@ $(document).ready(function(){
 		$.ajax({
 			url:"/order/order-detail/"+id
 		})
+	})
+	$(".glyphicon-menu-hamburger").click(function(){
+		var display = $(".navbar-nav, .nav").attr("data-status");
+		if(display==="false"){
+			$(".navbar-nav, .nav").attr("data-status","true");
+			$(".navbar-nav, .nav").css("display","flex")
+		} else {
+			$(".navbar-nav, .nav").attr("data-status","false");
+			$(".navbar-nav, .nav").css("display","none")
+		}
 	})
 })
