@@ -12,7 +12,7 @@
 <script src="/static/js/webbanhang.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-<title>Insert title here</title>
+<title>Web site demo</title>
 </head>
 <body>
 	<header>
