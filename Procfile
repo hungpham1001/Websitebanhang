@@ -1,1 +1,1 @@
-web: java -war target/websitebanhangdemo-1.0.war
+web: java -jar target/websitebanhangdemo-1.0.jar
