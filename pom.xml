@@ -11,7 +11,7 @@
 	<groupId>com.study</groupId>
 	<artifactId>Websitebanhang</artifactId>
 	<version>1.0</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>Websitebanhang</name>
 	<description>Demo project for Spring Boot</description>
 
