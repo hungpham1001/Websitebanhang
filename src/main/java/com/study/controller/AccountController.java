@@ -117,7 +117,7 @@ public class AccountController {
 	public String registSuccess(Model model) throws MessagingException  {
 		HttpSession session = request.getSession();
 		Customer user =(Customer) session.getAttribute("userRegist");
-		String text = "Please click a link below to activate your account<br>http://localhost:8080/account/activate/"
+		String text = "Please click a link below to activate your account<br>https://websitebanhangdemo.herokuapp.com/account/activate/"
 								+user.getId();	
 		MailForm form = new MailForm(user.getEmail(), "Activate account from websitebanhang", text);
 			mail.send(form);
@@ -180,7 +180,7 @@ public class AccountController {
 		Customer cust = cus.findByEmail(email);
 		if(cust!=null) {
 			String id = Base64.getEncoder().encodeToString(cust.getId().getBytes());
-			String text = "<p style='color: red'><a href='http://www.localhost:8080/account/forgot/"+id+"'>Click this link</a> to change your password</p>";
+			String text = "<p style='color: red'><a href='https://websitebanhangdemo.herokuapp.com/account/forgot/"+id+"'>Click this link</a> to change your password</p>";
 			MailForm mailer = new MailForm(email,"Link to change your password on Websitebanhang",text);
 			mail.send(mailer);
 			model.addAttribute("message","Link to change password was send to your mail");

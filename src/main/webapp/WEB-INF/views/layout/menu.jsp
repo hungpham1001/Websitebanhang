@@ -1,7 +1,7 @@
 <%@page pageEncoding="utf-8" %>
 <%@taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 	<nav class="navbar navbar-default" data-spy="affix" data-offset-top="150">
-		<ul class="nav navbar-nav">
+		<ul class="nav navbar-nav col-md-12">
 			<li><a href="/home">Home</a></li>
 			<li><a href="#">All Product</a>
 				<div>
