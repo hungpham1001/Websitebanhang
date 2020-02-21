@@ -1,14 +1,25 @@
+,table th, .table td{
+	width: auto;
+}
 .basketDetail img{
 	max-width: 200px;
 	max-height: 200px;
 }
+.basket{
+	display: flex;
+}
 #sideNav {
+	display: none;
 	position: relative;
 	top: 10px;
 	margin-left: 20px;
 	overflow-y: scroll;
-	width: 0px;
 	transition: 0.5s;
+	padding: 5px;
+}
+#main{
+	flex: 70%;
+	padding: 5px;
 }
 .close{
 	position: absolute;

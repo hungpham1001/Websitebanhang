@@ -71,14 +71,14 @@ $(document).ready(function(){
 		var html =``;
 		if($("#amount").val()!=0){
 			$("#main").css({flex:"70%",transition:"0.5s"});
-			$("#sideNav").css({flex:"30%",transition:"0.5s"})
+			$("#sideNav").css({display:"block", flex:"30%",transition:"0.5s"})
 		} else {
 			alert("Please add items into basket!");
 			$("h3").prepend("<h4>Please add items into basket!</h4>")
 		}
 	})
 	$(".close").click(function(){
-		$("#sideNav").css({flex:"0%",transition:"0.5s"});
+		$("#sideNav").css({display:"none",flex:"0%",transition:"0.5s"});
 		$("#main").css({flex:"100%",transition:"0.5s"})
 	})
 	$("button[name=orderDetail]").click(function(){
